@@ -213,12 +213,6 @@ void update()
 	if(ENTITY::IS_ENTITY_DEAD(playerPed)) { return; }
 	if(PLAYER::IS_PLAYER_BEING_ARRESTED(player, TRUE)) { return; }
 
-
-	int dline;
-	dline = draw_debug("Flashback! debug", 1, 0);
-	dline = draw_debug("fcount", fcount, dline);
-	dline = draw_debug("fxactive", fxactive, dline);
-
 	if(((CONTROLS::IS_CONTROL_PRESSED(2, gp_flashback_1)) && (CONTROLS::IS_CONTROL_PRESSED(2, gp_flashback_2))) || (IsKeyDown(kb_flashback)))
 	{
 		if (!fxactive)
